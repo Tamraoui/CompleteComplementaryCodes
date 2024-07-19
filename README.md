@@ -9,7 +9,7 @@ This repo contains matlab function that generate the complete complementary code
 
 A comparision io syntetic transmit aperture on the verasonics scanner using the L7-4 probe without and with the coding scheme
 
-![Transmit and decoding scheme](./img/res.png)
+![Transmit and decoding scheme](./img/res2.png)
 
  If you use our code please cite our paper ;)
 
