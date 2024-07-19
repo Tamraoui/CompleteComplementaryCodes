@@ -1,6 +1,9 @@
 # CompleteComplementaryCodes
 
+
 This repo contains matlab function that generate the complete complementary codes. This codes has been used as a coded excitation sequences for increasing the SNR of sparse arrays for 3D ultrasound imaging in this ([paper](https://ieeexplore.ieee.org/document/10287569)).
+
+![Transmit and decoding scheme](./img/sta_scheme.png)
 
  If you use our code please cite our paper ;)
 
