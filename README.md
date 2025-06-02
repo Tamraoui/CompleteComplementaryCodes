@@ -14,6 +14,7 @@ Power Doppler imaging is a commonly used technique for visualizing blood flow in
 
 ![Encoding-waveform of MPWI-CCC](./img/encoding_matrix.png)
 
+
 ---
 
 ## CCC Correlation Properties
