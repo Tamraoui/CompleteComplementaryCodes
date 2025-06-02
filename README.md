@@ -36,3 +36,14 @@ The figures below illustrate the ideal correlation properties of a (4,4,4)-CCC s
 - `functions/` – All the matlab function are here.
   
 ---
+
+## Citations
+If you use this code somehow, please cite these two papers :
+
+**Tamraoui, M., Bernard, A., Roux, E., & Liebgott, H.**  
+*Complementary Coded Multiplane Wave Sequences for SNR Increase in Ultrafast Power Doppler Ultrasound Imaging*  
+IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control.
+
+**Tamraoui, M., & Liebgott, H., Roux, E.**  
+*Complete complementary coded excitation scheme for snr improvement of 2d sparse array ultrasound imaging*  
+IEEE Transactions on Biomedical Engineering 71.3 (2023): 1043-1055.
