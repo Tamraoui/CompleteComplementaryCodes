@@ -1,15 +1,16 @@
-% --- By Mohamed TAMRAOUI. Don't you dare remove my name !
+
 % this function generetes a set of complemete complementary sequences
 % --- INPUTS : 
-    % M : Number of sets
+    % M : Help controls the length of the sequences
     % N : Number of sequences in each set
     % L : Length of each sequence
 % --- OUTPUT : 
-    % sets : Sets of complete complementray sequences
+    % sets : Sets of complete complementray sequences as cell array: each
+    % cell reprsent a set
 % Version 1.0 
 % Date : 13/06/2022
 
-function [sets] = codes_M_N_MNP(M,N,L)
+function [sets] = codes_N_N_MNP(M,N,L)
 
     if(M>N)
         error('M should be less than or equal to N');
@@ -17,7 +18,9 @@ function [sets] = codes_M_N_MNP(M,N,L)
     if(mod(N*M,L)~=0)
         error('L must be chosen so that P is an integer.');
     end
+    % calculate P based on the disered length (L) : much easier this way
     P=M*N/L;
+    
     if(mod(N,P)~=0)
         error('L must be chosen so that P should devide into N.');
     end
@@ -28,24 +31,11 @@ function [sets] = codes_M_N_MNP(M,N,L)
 
     N_P=N/P;
     MN_P=M*N/P;
-
     Nt=M;
-    % first seed matrix
-    I=eye(Nt/2);
-    z=zeros(size(I));
-    Pn=[z I;I z];
-    Qn=eye(Nt);
-    H= hadamard(Nt);
-    HB=Pn*H*Qn;
-    % second seed matrix
-    Nt=N_P;
-    Hada1=hadamard(Nt);
-    GolayDia=diag(generate_golay(log2(Nt)));
-    HC=Hada1*GolayDia;
-    B=HB;%hadamard(M);
-    %B=hadamard(M);
-    C=HC;%hadamard(N_P);
-    %C=hadamard(N_P);
+
+    B=hadamard(M);
+    C=hadamard(N_P);
+    
     D=[];
     for i=1:N_P/M
         H=hadamard(N_P);
@@ -74,30 +64,4 @@ function [sets] = codes_M_N_MNP(M,N,L)
         M=reshape(Sp(i,:),MN_P,N)';
         sets{i}=M;
     end
-end
-
-
-
-
-function [a,b] = generate_golay(N)
-% [a,b] = generate_golay(N)
-%
-% Generate the Golay codes a and b with length 2^N.
-%
-% Then write them to disk as golayA.wav and golayB.wav.
-
-
-% These initial a and b values are Golay
-a = [1 1];
-b = [1 -1];
-
-% Iterate to create a longer Golay sequence
-while (N>1)
-    olda = a;
-    oldb = b;
-    a = [olda oldb];
-    b = [olda -oldb];
-
-    N = N - 1;
-end
 end
