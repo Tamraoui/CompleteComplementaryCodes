@@ -16,6 +16,18 @@ The CCC used here are defined as \((N, N, MN/P)\)-CCC, and allow control over th
 
 ---
 
+## CCC Correlation Properties
+
+The figures below illustrate the ideal correlation properties of a (4,4,4)-CCC sequence set.
+
+### Auto-Correlation
+![Auto-Correlation of CCC](./img/correlations_ccc.png)
+
+### Cross-Correlation
+![Cross-Correlation of CCC](./img/crosscorrelationccc.png)
+
+---
+
 ## Repository Contents
 
 - `demoCorrelations.m` – MATLAB script to generate CCC sequences and demonstrate their correlation properties.
