@@ -10,14 +10,14 @@ IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control.
 
 ## Overview
 
-This work introduces **MPWI-CCC**, a novel Multi-Plane Wave Imaging technique that uses Complete Complementary Codes (CCC) to enhance the **SNR** and **contrast** in ultrafast power Doppler ultrasound imaging. These codes are used to modulate quasi-simultaneously transmitted tilted plane waves and ensure perfect separation upon decoding due to their ideal correlation properties.
+Power Doppler imaging is a commonly used technique for visualizing blood flow in ultrasound imaging. This technique measures flow amplitude rather than velocity, and it relies on detecting the power of Doppler signals, making it particularly useful for detecting weak blood flow. The emergence of coherent plane wave compounding has enabled significant progress in ultrafast power Doppler imaging. However, the lack of transmit focusing leads to low Signal-to-Noise Ratio (SNR) and contrast, thereby reducing the sensitivity to blood flow, particularly in deep tissue regions. We propose to increase the SNR and contrast of ultrafast power Doppler imaging by leveraging the ideal correlation properties of Complete Complementary Codes (CCC) for Multi-Plane Wave Imaging (MPWI). The MPWI-CCC method consists of transmitting quasi-simultaneously N tilted plane waves coded with a binary sequence of length L. Subsequently, the backscattered signals from each plane wave are individually recovered with high amplitude through decoding. We compared MPWI-CCC and Multi-plane Wave Imaging with Hadamard encoding (MPWI-HD) against Coherent Plane Wave Compounding (CPWC) in both simulations and experiments. When transmitting four plane waves on a commercial blood flow phantom, MPWI-CCC exhibited SNR and contrast gains of 13.02dB and 10.08dB, respectively, compared to CPWC. MPWI-HD, on the other hand, achieved gains of only 6.99dB and 4.29dB, respectively. 
 
-The CCC used here are defined as \((N, N, MN/P)\)-CCC, and allow control over the code length.
+![Encoding-waveform of MPWI-CCC](./img/encoding_matrix.png)
 
 ---
 
 ## CCC Correlation Properties
-
+The CCC used here are defined as \((N, N, MN/P)\)-CCC, and allow control over the code length.
 The figures below illustrate the ideal correlation properties of a (4,4,4)-CCC sequence set.
 
 ### Auto-Correlation
