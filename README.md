@@ -34,7 +34,10 @@ The figures below illustrate the ideal correlation properties of a (4,4,4)-CCC s
 - `demoCorrelations.m` – MATLAB script to generate CCC sequences and demonstrate their correlation properties.
 - `demoGenMPWI3Cwaveforms.m` – Field II example script demonstrating MPWI-CCC.
 - `DAS/` – Folder containing beamforming codes.
-- `functions/` – All the matlab function are here.
+- `functions/` – All the matlab function are here :
+- `codes_N_N_MNP.m` – function that generate the binary CCC sequences (+1 and -1). Each matlab Cell corresponds to a set.
+- `bandwidthMatching.m` – function is used to modulate a chip with the binary codes. +1 correspond to a phase of 0° and -1 corresponds to a phase of 180°.
+- `npComplementaryCodes.m` function used to get the final bandwidth match CCC codes. Each set corresponds to a set. 
   
 ---
 
