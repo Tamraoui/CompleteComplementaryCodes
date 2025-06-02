@@ -40,7 +40,7 @@ centers=centers(24:26,:)';
 
 
 
-na=8;
+na=4;
 if(na==2)
     angles=(-1:2:1);
 elseif(na==4)
@@ -54,8 +54,6 @@ excitation = sin(2 * pi * f0 * (0:1/fs:1/f0));
 [ccc_waveforms,~]=npComplementrayCodes(excitation,M,N,L,1);
 [ ccc_data  ] = genMWPI3Cwaveforms(ccc_waveforms, angles, centers(:,1)' ,fs , c);
 
-W1=ccc_data(1).tot;
-[dead_zone,t] = calc_dead_zone(size(W1,1),fs,c);
 
 
 positions=[0 0 30]/1000;
